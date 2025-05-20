@@ -1,11 +1,6 @@
 <template>
   <main>
     <section id="first-part">
-      <div class="container appear presentation">
-        <p>{{ $t("hello") }}</p>
-        <p>{{ $t("myself") }}</p>
-        <p>{{ $t("data") }}</p>
-      </div>
       <div class="container appear-one">
         <ul>
           <li>
@@ -29,6 +24,13 @@
       </div>
     </section>
     <section id="second-part">
+      <div class="container appear presentation">
+        <p>{{ $t("hello") }}</p>
+        <p>{{ $t("myself") }}</p>
+        <p>{{ $t("data") }}</p>
+      </div>
+    </section>
+    <section id="second-part">
       <div class="container appear">
         <p>{{ $t("amateur") }}</p>
         <p>{{ $t("determination") }}</p>
@@ -48,7 +50,6 @@ const finalMilesTravelled = 154203;
 const finalIncidentEncountered = 0;
 const finalCountryDiscovered = 21;
 
-// Reactive display values
 const flightAttended = ref(0);
 const hoursInFlight = ref(0);
 const milesTravelled = ref(0);
@@ -58,41 +59,63 @@ const countryDiscovered = ref(0);
 // Animate function
 function animateValue(refVar, endValue, duration = 2000) {
   const startTime = performance.now();
-  // const startValue = 0;
-
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
     refVar.value = Math.floor(progress * endValue);
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      refVar.value = endValue; // ensure final value is set
-    }
+    if (progress < 1) requestAnimationFrame(update);
+    else refVar.value = endValue;
   }
-
   requestAnimationFrame(update);
 }
 
-onMounted(() => {
+function initCounters() {
   animateValue(flightAttended, finalFlightAttended);
   animateValue(hoursInFlight, finalHoursInFlight);
   animateValue(milesTravelled, finalMilesTravelled);
   animateValue(incidentEncountered, finalIncidentEncountered);
   animateValue(countryDiscovered, finalCountryDiscovered);
+}
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        if (entry.isIntersecting) {
+          el.classList.add("active");
+
+          // Optional: Run animations only for the stats section
+          if (el.id === "first-part") {
+            initCounters();
+          }
+        } else {
+          el.classList.remove("active");
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% visible
+    }
+  );
+
+  document.querySelectorAll("section").forEach((section) => {
+    observer.observe(section);
+  });
 });
 </script>
 
 <style scoped lang="scss">
 main {
-  height: 80vh;
+  height: 100vh;
+  height: 100svh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
 
   @media (min-width: 320px) and (max-width: 551px) {
     margin-top: 75px;
@@ -103,15 +126,18 @@ main {
   }
 
   section {
-    scroll-snap-align: start;
     height: 100vh;
+    height: 100dvh;
+    scroll-snap-align: start;
+    display: grid;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 
-    @media (min-width: 551px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
+    &.active {
+      opacity: 1;
     }
-
     div {
       @media (min-width: 320px) and (max-width: 991px) {
         margin: 25px auto;
@@ -190,5 +216,4 @@ main {
     }
   }
 }
-
 </style>

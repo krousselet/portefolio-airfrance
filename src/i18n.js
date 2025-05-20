@@ -6,6 +6,7 @@ const messages = {
     // NAV
     home: "Home",
     about: "About",
+    cv: "Curriculum Vitae",
     // SLOGAN
     slogan: "Aiming for excellence",
     toggleDark: "Dark Mode",
@@ -27,6 +28,7 @@ const messages = {
     // NAV
     home: "Accueil",
     about: "À propos",
+    cv: "Curriculum Vitae",
     // SLOGAN
     slogan: "Viser l'excellence",
     toggleDark: "Mode Sombre",
