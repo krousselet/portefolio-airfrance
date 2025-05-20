@@ -106,6 +106,11 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+
+body {
+  height: 100dvh;
+  overflow: hidden;
+}
 main {
   height: 100vh;
   height: 100svh;

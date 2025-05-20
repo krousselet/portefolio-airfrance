@@ -35,8 +35,6 @@ body {
   background-color: white;
    margin: 0;
   padding: 0;
-  height: 100dvh;
-  overflow: hidden; // prevent unwanted scrollbars
 }
 
 body.dark-mode {
