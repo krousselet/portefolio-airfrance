@@ -39,8 +39,16 @@ body.dark-mode {
   color: #ffffff;
 }
 
+body.dark-mode main .container ul li span {
+  color: red;
+}
+
 body.dark-mode a {
   color: #9ae3ff;
+}
+
+ul {
+  list-style: none;
 }
 
 .flex {
@@ -82,6 +90,14 @@ body.dark-mode a {
   animation: appear 3s 0.1s ease-in-out forwards;
 }
 
+.appear-one {
+  animation: appear 3s 0.3s ease-in-out forwards;
+}
+
+.appear-two {
+  animation: appear 3s 0.6s ease-in-out forwards;
+}
+
 .fromLeftToRight {
   position: relative;
   left: -100vw;
@@ -112,10 +128,11 @@ body.dark-mode a {
   }
 }
 
-.title-container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin:  0 auto;
 }
 

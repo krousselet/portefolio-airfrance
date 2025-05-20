@@ -1,8 +1,8 @@
 <template>
   <div class="container-child">
-  <select v-model="locale" @change="changeLang">
-    <option value="en">English</option>
-    <option value="fr">Français</option>
+  <select for="selector" v-model="locale" @change="changeLang">
+    <option id="selectorEnglish" name="selector" value="en">English</option>
+    <option id="selectorFrench" name="selector" value="fr">Français</option>
   </select>
   </div>
 </template>

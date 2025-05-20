@@ -1,7 +1,7 @@
 <template>
   <div class="container-child">
-  <label class="toggle-switch">
-    <input type="checkbox" v-model="isDark" @change="applyTheme" />
+  <label class="toggle-switch" for="darkThemeSwitch">
+    <input id="darkThemeSwitch" nama="darkThemeSwitch" type="checkbox" v-model="isDark" @change="applyTheme" />
     <span class="slider"></span>
   </label>
   </div>
