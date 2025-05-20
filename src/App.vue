@@ -1,23 +1,27 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
+    <router-link class="auto-underline" to="/">{{ $t('home') }}</router-link>
+    <router-link class="auto-underline" to="/about">{{ $t('about') }}</router-link>
   </nav>
   <router-view />
   <DarkModeToggle />
+  <LanguageSwitcherComponent />
 </template>
 
 <script>
 import DarkModeToggle from "./components/DarkModeToggle.vue";
+import LanguageSwitcherComponent from "./components/LanguageSwitcherComponent.vue";
 
 export default {
   components: {
     DarkModeToggle,
+    LanguageSwitcherComponent,
   },
 };
 </script>
 
 <style lang="scss">
+
 *,
 ::before,
 ::after {
@@ -84,6 +88,37 @@ body.dark-mode a {
   animation: fromLeftToRight 2s 0.2s ease-in-out forwards;
 }
 
+.auto-underline {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s ease-in-out;
+    height: 2px;
+    width: 0;
+    background: #031452;
+  }
+
+  &:hover::after {
+    transition: .2s ease-in-out;
+    width: 100%;
+  }
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:  0 auto;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -101,11 +136,12 @@ nav {
     font-weight: bold;
     color: #2c3e50;
     display: flex;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: 100%;
-    margin: 0 auto;
+    margin: auto;
     @media (min-width: 320px) and (max-width: 550px) {
       letter-spacing: 6px;
       font-size: 3vw;

@@ -1,8 +1,10 @@
 <template>
+  <div class="container-child">
   <label class="toggle-switch">
     <input type="checkbox" v-model="isDark" @change="applyTheme" />
     <span class="slider"></span>
   </label>
+  </div>
 </template>
 
 <script>
@@ -41,13 +43,14 @@ export default {
 
 <style scoped>
 .toggle-switch {
+  z-index: 1000;
   position: absolute;
   display: inline-block;
-  width: 10vw;
+  width: 55px;
   height: 28px;
   top: 100px;
   left: 25px;
-  max-width: 50px;
+  max-width: px;
 }
 
 .toggle-switch input {

@@ -2,13 +2,13 @@
   <main>
     <section class="mask-airfrance">
       <div class="video-container wrapper appear fromLeftToRight">
-        <video autoplay muted loop playsinline preload>
+        <video autoplay muted loop playsinline>
           <source src="/videos/sky.mp4" type="video/mp4" />
           Le navigateur ne supporte pas la vidéo.
         </video>
       </div>
       <div class="svg-container">
-        <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 285 80">
+        <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 285 80" height="100%">
           <defs>
             <mask id="mask" x="0" y="0" width="100%" height="100%">
               <rect
@@ -22,11 +22,21 @@
               <text
                 x="50%"
                 y="50%"
-                dominant-baseline="middle"
+                dominant-baseline="auto"
                 text-anchor="middle"
                 fill="black"
               >
                 AIR FRANCE
+              </text>
+              <!-- AIRFRANCE -->
+              <text
+                x="50%"
+                y="75%"
+                dominant-baseline="auto"
+                text-anchor="middle"
+                fill="black"
+              >
+                {{ $t('slogan') }}
               </text>
             </mask>
           </defs>
@@ -40,11 +50,6 @@
             mask="url(#mask)"
           />
         </svg>
-      </div>
-    </section>
-    <section class="slogan">
-      <div class="flex appear">
-        <h2 class="stretch">Viser l'excellence</h2>
       </div>
     </section>
   </main>
@@ -67,20 +72,18 @@ main {
 
   .mask-airfrance {
     position: relative;
-    margin: 0 auto;
     width: 100%;
-    height: 150px;
-    @media (min-width: 320px) and (max-width: 991px) {
-      margin-top: 150px;
-    }
-    @media (min-width: 992px) and (max-width: 2440px) {
-      margin-top: 150px;
+    height: 800px;
+    @media (min-width: 320px) and (max-width: 1920px) {
+       margin: -25px auto;
+      height: 350px;
     }
     @media (min-width: 1921px) and (max-width: 2440px) {
-      margin-top: 180px;
+          margin: auto;
+          height: 500px;
     }
     @media (min-width: 2441px) {
-      margin-top: 210px;
+       margin: auto;
     }
 
     .wrapper {
@@ -100,8 +103,16 @@ main {
     }
 
     .svg-container {
+      @media (min-width: 320px) and (max-width: 1920px) {
+      margin: auto;
+      height: 350px;
+    }
+    @media (min-width: 1921px) and (max-width: 2440px) {
+          margin: auto;
+          height: 500px;
+    }
       width: 100%;
-      height: 100%;
+      height: 800px;
       position: absolute;
       top: 0;
       left: 0;
@@ -113,7 +124,6 @@ main {
 
         mask {
           width: 100%;
-          max-height: 800px;
           rect {
             display: flex;
             justify-self: center;
@@ -121,17 +131,18 @@ main {
           }
 
           text {
-            @media (min-width: 992px) and (max-width: 1920px) {
+            @media (min-width: 320px) and (max-width: 991px) {
               font-size: 1.6vw;
-              letter-spacing: 5px;
+            }
+            @media (min-width: 992px) and (max-width: 1920px) {
+              font-size: 1vw;
             }
             @media (min-width: 1921px) and (max-width: 2440px) {
-              font-size: 1vw;
-              letter-spacing: 5px;
+              font-size: 20px;
             }
             @media (min-width: 2441px) {
-              font-size: 0.8vw;
-              letter-spacing: 10px;
+              font-size: 16px;
+              letter-spacing: 2px;
             }
             font-size: 4vw;
             font-weight: 900;
