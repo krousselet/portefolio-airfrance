@@ -150,7 +150,7 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 1000;
-  background-color: rgba(245, 245, 245, 0.699);
+  background-color: rgba(255, 255, 255, 0.699);
   @media (min-width: 320px) and (max-width: 550px) {
     height: 80px;
   }

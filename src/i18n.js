@@ -24,6 +24,13 @@ const messages = {
     hoursInFlight: "Flight hours",
     incidentEncountered: "Incidents encountered",
     countryDiscovered: "Country Discovered",
+    // ABOUT PAGE
+    formTitle: "Contact me",
+    placeholderName: "Your name",
+    placeholderEmail: "Your email",
+    placeholderMessage: "Your message",
+    formSend: "Send",
+    formValidationText: "Your message has been sent",
   },
   fr: {
     // NAV
@@ -48,12 +55,20 @@ const messages = {
     incidentEncountered: "Incidents rencontrés",
     countryDiscovered: "Pays découverts",
     //APPLY
+    // ABOUT PAGE
+    formTitle: "Contactez moi",
+    placeholderName: "Votre nom",
+    placeholderEmail: "Votre email",
+    placeholderMessage: "Votre message",
+    formSend: "Envoyer",
+    formValidationText: "Votre message a bien été envoyé",
   },
   it: {
     // NAV
     home: "Home",
     about: "Chi sono",
     apply: "Candidatura",
+    contact: "Contattare",
     // SLOGAN
     slogan: "Puntare all'eccellenza",
     toggleDark: "Modalità scura",
@@ -71,6 +86,13 @@ const messages = {
     incidentEncountered: "Incidenti incontrati",
     countryDiscovered: "Paesi scoperti",
     // APPLY
+    // ABOUT PAGE
+    formTitle: "Contattarmi",
+    placeholderName: "Nome",
+    placeholderEmail: "Mail",
+    placeholderMessage: "Messagio",
+    formSend: "Mandare",
+    formValidationText: "Il messagio è partito",
   },
 
   es: {
@@ -78,6 +100,7 @@ const messages = {
     home: "Inicio",
     about: "Acerca de mí",
     apply: "Solicitud",
+    contact: "Contactar",
     // SLOGAN
     slogan: "Apuntar a la excelencia",
     toggleDark: "Modo oscuro",
@@ -95,6 +118,13 @@ const messages = {
     incidentEncountered: "Incidentes encontrados",
     countryDiscovered: "Países descubiertos",
     // APPLY
+    // ABOUT PAGE
+    formTitle: "Contactar conmigo",
+    placeholderName: "Nombre",
+    placeholderEmail: "Correo electrónico",
+    placeholderMessage: "Mensaje",
+    formSend: "Mandar",
+     formValidationText: "El mensaje fue enviado",
   },
    de: {
     // NAV
@@ -141,6 +171,13 @@ const messages = {
     incidentEncountered: "Zwischenfälle",
     countryDiscovered: "Bereiste Länder",
     // APPLY
+    // ABOUT PAGE
+    formTitle: "Contactar conmigo",
+    placeholderName: "Nombre",
+    placeholderEmail: "Correo electrónico",
+    placeholderMessage: "Mensaje",
+    formSend: "отправля́ть",
+     formValidationText: "El mensaje fue enviado",
   },
 };
 

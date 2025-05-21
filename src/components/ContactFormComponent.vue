@@ -1,13 +1,32 @@
 <template>
   <div class="contact-form">
-    <form @submit.prevent="handleSubmit" v-if="!submitted">
-      <h2>{{ $t('formTitle') }}</h2>
+    <form
+      @submit.prevent="handleSubmit"
+      v-if="!submitted"
+      action="https://formspree.io/f/xanokgkz"
+      method="POST"
+    >
+      <h2>{{ $t("formTitle") }}</h2>
 
-      <input v-model="form.name" type="text" placeholder="Your Name" required />
-      <input v-model="form.email" type="email" placeholder="Your Email" required />
-      <textarea v-model="form.message" placeholder="Your Message" required></textarea>
+      <input
+        v-model="form.name"
+        type="text"
+        :placeholder="$t('placeholderName')"
+        required
+      />
+      <input
+        v-model="form.email"
+        type="email"
+        :placeholder="$t('placeholderEmail')"
+        required
+      />
+      <textarea
+        v-model="form.message"
+        :placeholder="$t('placeholderMessage')"
+        required
+      ></textarea>
 
-      <button type="submit">Send</button>
+      <button type="submit">{{ $t("formSend") }}</button>
     </form>
 
     <!-- Animation on submission -->
@@ -39,22 +58,35 @@ export default {
     };
   },
   methods: {
-    handleSubmit() {
-      // TODO: Hook this to an email API like EmailJS, Formspree, etc.
-      this.submitted = true;
+  async handleSubmit() {
+    try {
+      const response = await fetch("https://formspree.io/f/xanokgkz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.form),
+      });
 
-      // Optional: reset form after animation
-      setTimeout(() => {
-        this.submitted = false;
-        this.form = { name: "", email: "", message: "" };
-      }, 5000);
-    },
+      if (response.ok) {
+        this.submitted = true;
+        setTimeout(() => {
+          this.submitted = false;
+          this.form = { name: "", email: "", message: "" };
+        }, 5000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Submission failed", err);
+      alert("Error submitting form.");
+    }
   },
+},
 };
 </script>
 
 <style scoped lang="scss">
-
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
