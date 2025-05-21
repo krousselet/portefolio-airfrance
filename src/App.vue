@@ -36,6 +36,7 @@ body {
    margin: 0;
   padding: 0;
   height: 100dvh;
+  overflow-x: hidden;
 }
 
 body.dark-mode {
