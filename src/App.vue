@@ -3,6 +3,7 @@
     <router-link class="auto-underline" to="/">{{ $t('home') }}</router-link>
     <router-link class="auto-underline" to="/about">{{ $t('about') }}</router-link>
     <router-link class="auto-underline" to="/cv">{{ $t('apply') }}</router-link>
+    <router-link class="auto-underline" to="/contact">{{ $t('contact') }}</router-link>
   </nav>
   <router-view />
   <DarkModeToggle />
@@ -147,6 +148,9 @@ nav {
   align-items: center;
   margin: 0 auto;
   width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(245, 245, 245, 0.699);
   @media (min-width: 320px) and (max-width: 550px) {
     height: 80px;
   }

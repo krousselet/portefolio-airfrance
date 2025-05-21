@@ -25,7 +25,7 @@ const changeLang = () => {
 
 <style scoped>
 select {
-  position: absolute;
+  position: fixed;
   left: 15px;
   top: 150px;
   padding: 5px;

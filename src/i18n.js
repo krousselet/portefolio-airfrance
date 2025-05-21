@@ -7,6 +7,7 @@ const messages = {
     home: "Home",
     about: "About",
     apply: "Apply",
+    contact: "Contact",
     // SLOGAN
     slogan: "Aiming for excellence",
     toggleDark: "Dark Mode",
@@ -29,6 +30,7 @@ const messages = {
     home: "Accueil",
     about: "À propos",
     apply: "Postuler",
+     contact: "Contacter",
     // SLOGAN
     slogan: "Viser l'excellence",
     toggleDark: "Mode Sombre",
@@ -99,6 +101,29 @@ const messages = {
     home: "Startseite",
     about: "Über mich",
     apply: "Lebenslauf",
+    // SLOGAN
+    slogan: "Streben nach Spitzenleistung",
+    toggleDark: "Modo oscuro",
+    // ABOUT PAGE
+    hello: "Hola",
+    myself: "Me llamo Kevin y acabo de obtener mis alas",
+    data: "Mis datos de servicio",
+    determination: "Estoy listo para demostrar mi valía en el aire",
+    qualities: "Rigor, pasión, sangre fría, seguridad...",
+    amateur: "Aunque soy principiante",
+    motivation: "Para hacer de cada vuelo un éxito",
+    flightAttended: "Anzahl absolvierte Flüge",
+    milesTravelled: "Zurückgelegte Flugmeilen",
+    hoursInFlight: "Gesammelte Flugstunden",
+    incidentEncountered: "Zwischenfälle",
+    countryDiscovered: "Bereiste Länder",
+    // APPLY
+  },
+     ru: {
+    // NAV
+    home: "Главная",
+    about: "О себе",
+    apply: "Реэюме",
     // SLOGAN
     slogan: "Streben nach Spitzenleistung",
     toggleDark: "Modo oscuro",
