@@ -2,7 +2,7 @@
   <nav>
     <router-link class="auto-underline" to="/">{{ $t('home') }}</router-link>
     <router-link class="auto-underline" to="/about">{{ $t('about') }}</router-link>
-    <router-link class="auto-underline" to="/cv">{{ $t('cv') }}</router-link>
+    <router-link class="auto-underline" to="/cv">{{ $t('apply') }}</router-link>
   </nav>
   <router-view />
   <DarkModeToggle />
@@ -35,6 +35,7 @@ body {
   background-color: white;
    margin: 0;
   padding: 0;
+  height: 100dvh;
 }
 
 body.dark-mode {

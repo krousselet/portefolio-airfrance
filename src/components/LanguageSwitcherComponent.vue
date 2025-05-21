@@ -3,6 +3,12 @@
   <select for="selector" v-model="locale" @change="changeLang">
     <option id="selectorEnglish" name="selector" value="en">English</option>
     <option id="selectorFrench" name="selector" value="fr">Français</option>
+    <option id="selectorItalian" name="selector" value="it">Italiano</option>
+    <option id="selectorSpanish" name="selector" value="es">Español</option>
+    <option id="selectorGerman" name="selector" value="de">Deutsch</option>
+    <option id="selectorRussian" name="selector" value="ru">Pусский</option>
+    <option id="selectorJapanese" name="selector" value="ja">日本語</option>
+    <option id="selectorChinese" name="selector" value="zh-Hans">日本人</option>
   </select>
   </div>
 </template>
