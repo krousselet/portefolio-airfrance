@@ -121,6 +121,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  margin-top: 90px;
 
   @media (min-width: 320px) and (max-width: 551px) {
     margin-top: 75px;

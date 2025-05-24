@@ -39,7 +39,7 @@
           stroke-width="2"
         />
       </svg>
-      <p>Message sent! I'll be in touch soon.</p>
+      <p>{{ $t('formValidationText') }}</p>
     </div>
   </div>
 </template>

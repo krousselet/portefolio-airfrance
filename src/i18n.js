@@ -179,6 +179,37 @@ const messages = {
     formSend: "отправля́ть",
      formValidationText: "El mensaje fue enviado",
   },
+  ja: {
+    // NAV
+    home: "ホーム ",
+    about: "概要",
+    apply: "応募",
+    contact: "Contactar",
+    // SLOGAN
+    slogan: "高みを目指して",
+    toggleDark: "Modo oscuro",
+    // ABOUT PAGE
+    hello: "こんにちは",
+    myself: "私はケビン。新品の翼を手に入れたばかりです。",
+    data: "これまでの制作実績",
+    amateur: " 初心者ですが、",
+    determination: "空で自分の力を証明する準備はできています。",
+    qualities: "正確さ、情熱、冷静、安全…",
+    motivation: "すべてのフライトを成功させるために ",
+    flightAttended: "運航された便",
+    milesTravelled: "飛行距離s",
+    hoursInFlight: "飛行時間",
+    incidentEncountered: "遭遇したインシデント",
+    countryDiscovered: "就航路線 ",
+    // APPLY
+    // ABOUT PAGE
+    formTitle: "Contactar conmigo",
+    placeholderName: "Nombre",
+    placeholderEmail: "Correo electrónico",
+    placeholderMessage: "Mensaje",
+    formSend: "Mandar",
+     formValidationText: "El mensaje fue enviado",
+  },
 };
 
 const i18n = createI18n({

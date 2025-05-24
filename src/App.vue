@@ -49,6 +49,15 @@ body.dark-mode main .container ul li span {
   color: red;
 }
 
+body.dark-mode nav {
+  background-color: black;
+}
+
+body.dark-mode h2 {
+  background-color: black;
+  border-radius: 7px;
+}
+
 body.dark-mode a {
   color: #9ae3ff;
 }
@@ -110,6 +119,7 @@ ul {
   animation: fromLeftToRight 2s 0.2s ease-in-out forwards;
 }
 
+
 .auto-underline {
   display: flex;
   position: relative;
@@ -123,7 +133,7 @@ ul {
     left: 50%;
     transform: translateX(-50%);
     transition: .2s ease-in-out;
-    height: 2px;
+    height: 4px;
     width: 0;
     background: #031452;
   }
@@ -149,6 +159,8 @@ nav {
   margin: 0 auto;
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.699);
   @media (min-width: 320px) and (max-width: 550px) {
